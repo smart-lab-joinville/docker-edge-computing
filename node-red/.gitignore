@@ -1,0 +1,4 @@
+data/*
+!data/flows.json
+!data/settings.js
+package-lock.json

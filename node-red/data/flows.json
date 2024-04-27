@@ -1,0 +1,20 @@
+[
+    {
+        "id": "647fca8528fbbfc0",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "10c2ab6073c8f84a",
+        "type": "comment",
+        "z": "647fca8528fbbfc0",
+        "name": "NodeRED /w Docker",
+        "info": "",
+        "x": 150,
+        "y": 100,
+        "wires": []
+    }
+]

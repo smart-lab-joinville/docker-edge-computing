@@ -1,0 +1,25 @@
+{
+	"name": "node-red-container",
+	"keywords": [
+		"node-red"
+	],
+	"author": "Lucas Hitoshi Ogawa",
+	"license": "ISC",
+	"private": true,
+	"dependencies": {
+		"@prescient-devices/node-red-contrib-promptinput": "~1.0.7",
+		"node-red-contrib-s7": "^3.1.0",
+		"node-red-contrib-aedes": "~0.11.1",
+		"node-red-contrib-cpu": "~0.0.4",
+		"node-red-contrib-iiot-opcua": "~4.1.2",
+		"node-red-contrib-influxdb": "~0.6.1",
+		"node-red-contrib-moment": "~5.0.0",
+		"node-red-contrib-opcua": "~0.2.314",
+		"node-red-contrib-os": "~0.2.1",
+		"node-red-contrib-pdfmake2": "~2.0.0",
+		"node-red-contrib-telegrambot": "~15.1.6",
+		"node-red-contrib-ur-robot": "~1.0.4",
+		"node-red-dashboard": "~3.6.0",
+		"node-red-node-ui-table": "~0.4.3"
+	}
+}
