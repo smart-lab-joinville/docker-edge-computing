@@ -8,7 +8,7 @@ services:
             - 2880:1880
         volumes:
             - ./node-red/data:/data
-            - /data/node_modules
+            - node-red-pallets:/data/node_modules
         networks:
             - docker-network
     
@@ -26,7 +26,10 @@ services:
             - docker-network
 
 volumes:
+    node-red-pallets:
+        name: NodeREDPallets
     grafana-data:
+        name: GrafanaData
 
 networks:
     docker-network:
