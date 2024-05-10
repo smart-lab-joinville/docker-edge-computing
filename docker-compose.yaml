@@ -38,6 +38,14 @@ services:
         networks:
             - docker-network
 
+    http-server:
+        container_name: Apache
+        build: ./httpd
+        ports:
+            - 88:80
+        networks:
+            - docker-network
+
 volumes:
     node-red-data:
         name: NodeREDData
