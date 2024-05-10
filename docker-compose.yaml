@@ -40,7 +40,7 @@ services:
 
     http-server:
         container_name: Apache
-        build: ./httpd
+        build: ./apache
         ports:
             - 88:80
         networks:
