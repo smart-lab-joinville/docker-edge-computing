@@ -39,7 +39,7 @@ services:
             - docker-network
 
     http-server:
-        container_name: Apache
+        container_name: WebServer
         build: ./apache
         ports:
             - 88:80
