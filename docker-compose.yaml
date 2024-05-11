@@ -52,9 +52,10 @@ services:
         container_name: FileServer
         build: ./pure-ftpd
         ports:
-            - 20:20
-            - 21:21
-            - 21100-21110:21100-21110
+            - ${PURE_FTPD_DATA_PORT}:20
+            - ${PURE_FTPD_CONTROL_PORT}:21
+            - "${PURE_FTPD_MIN_PASV_PORT}-${PURE_FTPD_MAX_PASV_PORT}:\
+               ${PURE_FTPD_MIN_PASV_PORT}-${PURE_FTPD_MAX_PASV_PORT}"
         volumes:
             - pure-ftpd-data:/etc/pureftpd
             - www-files:/ftp/www
