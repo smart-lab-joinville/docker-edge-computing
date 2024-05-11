@@ -7,7 +7,7 @@ services:
         container_name: NodeRED
         build: ./node-red
         ports:
-            - 2880:1880
+            - ${NODE_RED_PORT}:1880
         volumes:
             - node-red-data:/data
             - node-red-pallets:/data/node_modules
