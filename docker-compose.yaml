@@ -40,7 +40,7 @@ services:
 
     http-server:
         container_name: WebServer
-        build: ./apache
+        build: ./httpd
         ports:
             - 88:80
         volumes:
