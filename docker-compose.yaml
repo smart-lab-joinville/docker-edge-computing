@@ -53,6 +53,9 @@ services:
             - 20:20
             - 21:21
             - 21100-21110:21100-21110
+        volumes:
+            - pure-ftpd-data:/etc/pureftpd
+            - www-files:/ftp/www
         environment:
             - PUBLIC_HOST=192.168.150.200
             - MIN_PASV_PORT=21100
@@ -69,6 +72,10 @@ volumes:
         name: GrafanaData
     influxdb-data:
         name: InfluxDBData
+    pure-ftpd-data:
+        name: PureFTPdData
+    www-files:
+        name: WebFiles
 
 networks:
     docker-network:
