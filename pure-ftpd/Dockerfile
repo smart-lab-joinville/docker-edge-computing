@@ -8,4 +8,6 @@ RUN pure-pw mkdb
 
 WORKDIR /ftp/www
 
+RUN chmod 777 /ftp/www
+
 WORKDIR /
