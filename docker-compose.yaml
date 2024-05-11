@@ -59,9 +59,9 @@ services:
             - pure-ftpd-data:/etc/pureftpd
             - www-files:/ftp/www
         environment:
-            - PUBLIC_HOST=192.168.150.200
-            - MIN_PASV_PORT=21100
-            - MAX_PASV_PORT=21110
+            - PUBLIC_HOST=${PURE_FTPD_PUBLIC_HOST}
+            - MIN_PASV_PORT=${PURE_FTPD_MIN_PASV_PORT}
+            - MAX_PASV_PORT=${PURE_FTPD_MAX_PASV_PORT}
         networks:
             - docker-network
 
