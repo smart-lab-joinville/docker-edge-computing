@@ -42,7 +42,7 @@ services:
         container_name: WebServer
         build: ./httpd
         ports:
-            - 88:80
+            - ${HTTPD_PORT}:80
         volumes:
             - www-files:/usr/local/apache2/htdocs
         networks:
