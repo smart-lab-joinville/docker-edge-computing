@@ -48,14 +48,15 @@ services:
 
     ftp-server:
         container_name: FileServer
-        image: fauria/vsftpd:latest
+        build: ./pure-ftpd
         ports:
             - 20:20
             - 21:21
             - 21100-21110:21100-21110
         environment:
-            - FTP_PASS=Smart4.0
-            - PASV_ADDRESS=192.168.150.200
+            - PUBLIC_HOST=192.168.150.200
+            - MIN_PASV_PORT=21100
+            - MAX_PASV_PORT=21110
         networks:
             - docker-network
 
