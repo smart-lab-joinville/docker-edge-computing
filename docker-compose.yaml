@@ -43,6 +43,8 @@ services:
         build: ./apache
         ports:
             - 88:80
+        volumes:
+            - www-files:/usr/local/apache2/htdocs
         networks:
             - docker-network
 
