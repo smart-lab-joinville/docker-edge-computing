@@ -12,7 +12,7 @@ services:
             - node-red-data:/data
             - node-red-pallets:/data/node_modules
         networks:
-            - docker-network
+            - data-processing-network
     
     grafana:
         container_name: Grafana
@@ -26,7 +26,7 @@ services:
             - grafana-data:/var/lib/grafana
             - /var/lib/grafana/plugins
         networks:
-            - docker-network
+            - data-processing-network
     
     influxdb:
         container_name: InfluxDB
@@ -36,7 +36,7 @@ services:
         volumes:
             - influxdb-data:/var/lib/influxdb2
         networks:
-            - docker-network
+            - data-processing-network
 
     http-server:
         container_name: WebServer
@@ -83,4 +83,7 @@ volumes:
 networks:
     docker-network:
         name: DockerNetwork
+        driver: bridge
+    data-processing-network:
+        name: DataProcessingNetwork
         driver: bridge
