@@ -70,6 +70,20 @@ services:
             - MAX_PASV_PORT=${PURE_FTPD_MAX_PASV_PORT}
         networks:
             - docker-network
+    
+    dns-server:
+        container_name: NameServer
+        build: ./bind9
+        restart: always
+        environment:
+            - BIND9_USER=root
+            - TZ=America/Sao_Paulo
+        ports:
+            - 53:53/tcp
+            - 53:53/udp
+        volumes:
+            - dns-config-data:/etc/bind
+            - dns-cache-data:/var/cache/bind
 
 volumes:
     node-red-data:
@@ -84,6 +98,10 @@ volumes:
         name: PureFTPdData
     www-files:
         name: WebFiles
+    dns-config-data:
+        name: DNSConfigData
+    dns-cache-data:
+        name: DNSCacheData
 
 networks:
     docker-network:

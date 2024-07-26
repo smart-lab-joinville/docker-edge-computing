@@ -1,0 +1,37 @@
+$TTL 2d
+
+$ORIGIN smart.
+
+@               IN      SOA     ns.smart.       info.smart. (
+                                2024072500      ; serial
+                                12h             ; refresh
+                                15m             ; retry
+                                3w              ; expire
+                                2h              ; minimum ttl
+)
+
+                        IN      NS      ns.smart.
+
+ns                      IN      A       192.168.240.200
+
+storage                 IN      A       192.168.150.10
+hmi.storage             IN      A       192.168.150.11
+drv-ver.storage         IN      A       192.168.150.12
+drv-rev.storage         IN      A       192.168.150.13
+
+process                 IN      A       192.168.150.20
+hmi.process             IN      A       192.168.150.21
+drv-hor.process         IN      A       192.168.150.22
+drv-trv.process         IN      A       192.168.150.23
+
+assembly                IN      A       192.168.150.30
+hmi.assembly            IN      A       192.168.150.31
+visor.assembly          IN      A       192.168.150.32
+robot.assembly          IN      A       192.168.150.33
+turck.assembly          IN      A       192.168.150.34
+
+expedition              IN      A       192.168.150.40
+hmi.expedition          IN      A       192.168.150.41
+drv-hor.expedition      IN      A       192.168.150.42
+drv-ver.expedition      IN      A       192.168.150.43
+drv-rev.expedition      IN      A       192.168.150.44
