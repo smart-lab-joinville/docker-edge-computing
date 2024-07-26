@@ -77,8 +77,8 @@ services:
             - BIND9_USER=root
             - TZ=America/Sao_Paulo
         ports:
-            - 53:53/tcp
-            - 53:53/udp
+            - ${BIND9_PORT}:53/tcp
+            - ${BIND9_PORT}:53/udp
         volumes:
             - dns-config-data:/etc/bind
             - dns-cache-data:/var/cache/bind
