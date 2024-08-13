@@ -45,6 +45,7 @@ services:
             - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUXDB_INIT_ADMIN_TOKEN}
         volumes:
             - influxdb-data:/var/lib/influxdb2
+            - influxdb-config:/etc/influxdb2
         networks:
             - data-processing-network
 
@@ -107,6 +108,8 @@ volumes:
         name: GrafanaProvDatasources
     influxdb-data:
         name: InfluxDBData
+    influxdb-config:
+        name: InfluxDBConfig
     pure-ftpd-data:
         name: PureFTPdData
     www-files:
