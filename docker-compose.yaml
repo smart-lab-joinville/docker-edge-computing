@@ -24,6 +24,9 @@ services:
             - influxdb
         ports:
             - ${GRAFANA_PORT}:3000
+        environment:
+            - GF_SECURITY_ADMIN_USER=${GRAFANA_SECURITY_ADMIN_USER}
+            - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_SECURITY_ADMIN_PASSWORD}
         volumes:
             - grafana-data:/var/lib/grafana
             - grafana-plugins:/var/lib/grafana/plugins
