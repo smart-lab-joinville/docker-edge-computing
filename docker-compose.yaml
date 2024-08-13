@@ -24,7 +24,9 @@ services:
             - ${GRAFANA_PORT}:3000
         volumes:
             - grafana-data:/var/lib/grafana
-            - /var/lib/grafana/plugins
+            - grafana-plugins:/var/lib/grafana/plugins
+            - grafana-config:/etc/grafana
+            - grafana-prov-datasources:/etc/grafana/provisioning/datasources
         networks:
             - data-processing-network
     
@@ -97,6 +99,12 @@ volumes:
         name: NodeREDPallets
     grafana-data:
         name: GrafanaData
+    grafana-plugins:
+        name: GrafanaPlugins
+    grafana-config:
+        name: GrafanaConfig
+    grafana-prov-datasources:
+        name: GrafanaProvDatasources
     influxdb-data:
         name: InfluxDBData
     pure-ftpd-data:
