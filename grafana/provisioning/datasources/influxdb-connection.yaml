@@ -1,0 +1,17 @@
+apiVersion: 1
+
+prune: true
+
+datasources:
+  - name: InfluxDB Connection
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    jsonData:
+      version: Flux
+      organization: $GF_PROVISIONING_INFLUXDB_ORG
+      defaultBucket: $GF_PROVISIONING_INFLUXDB_BUCKET
+      tlsSkipVerify: true
+      httpMode: "POST"
+    secureJsonData:
+      token: $GF_PROVISIONING_INFLUXDB_TOKEN
