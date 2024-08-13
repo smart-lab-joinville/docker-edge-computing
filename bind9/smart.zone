@@ -12,7 +12,7 @@ $ORIGIN smart.
 
                         IN      NS      ns.smart.
 
-ns                      IN      A       192.168.240.200
+ns                      IN      A       192.168.150.200 ; this IP can change
 
 storage                 IN      A       192.168.150.10
 hmi.storage             IN      A       192.168.150.11
