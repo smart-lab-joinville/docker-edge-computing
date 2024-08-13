@@ -5,6 +5,8 @@ services:
         container_name: NodeRED
         build: ./node-red
         restart: always
+        depends_on:
+            - influxdb
         ports:
             - ${NODE_RED_PORT}:1880
         volumes:
